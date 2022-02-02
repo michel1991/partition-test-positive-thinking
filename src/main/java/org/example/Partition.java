@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Partition {
 
-    public List takeLastGroup(List<Integer> list, int numberOfElementToTake){
+    private List takeLastGroup(List<Integer> list, int numberOfElementToTake){
         List lastGroupList = new ArrayList();
         if(numberOfElementToTake > 0){
             int size = list.size();
@@ -19,7 +19,7 @@ public class Partition {
         return lastGroupList;
     }
 
-    public List<List> takeAllFirstGroup(List<Integer> list, int restToLoop, int numberOfElementToTake){
+    private List<List> takeAllFirstGroup(List<Integer> list, int restToLoop, int numberOfElementToTake){
         List<List>  allFirstGroups = new ArrayList<>();
         for (int i = 0; i < restToLoop; i+=numberOfElementToTake) {
             List<Integer>  subGroup = new ArrayList<>();
