@@ -110,4 +110,13 @@ public class PartitionTest{
         partition.makePartition(this.listOfValues, -1);
     }
 
+    /**
+     * Rigorous Test :-)
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void makePartitionWithBigNumberPerSubList() {
+        Partition partition = new Partition();
+        partition.makePartition(this.listOfValues, 7);
+    }
+
 }

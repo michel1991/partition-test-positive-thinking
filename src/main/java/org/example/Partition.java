@@ -41,6 +41,11 @@ public class Partition {
         if(numberOfElementPerSubList <= 0){
             throw new IllegalArgumentException("number of element per list must be positive number");
         }
+
+        if(numberOfElementPerSubList > list.size()){
+            throw new IllegalArgumentException("number of element per list is greater than the number of element in list");
+        }
+
         int copyFirstSize = list.size();
         List takeLastGroup = this.takeLastGroup(list, copyFirstSize % numberOfElementPerSubList);
         int restOfElementToCopy = copyFirstSize - (copyFirstSize%numberOfElementPerSubList);
